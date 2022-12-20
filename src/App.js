@@ -1,5 +1,9 @@
 import "./App.css";
 import Header from "./components/header/Header";
+import Blogs from "./pages/blogs/Blogs";
+import About from "./pages/about/About";
+import Contact from "./pages/contact/Contact";
+import { Routes, Route } from "react-router-dom";
 
 const App = () => {
   const headerTitle = "Blogger";
@@ -12,6 +16,11 @@ const App = () => {
   return (
     <div className="App">
       <Header title={headerTitle} navLinks={navLinks} />
+      <Routes>
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </div>
   );
 };

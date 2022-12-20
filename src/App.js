@@ -6,6 +6,7 @@ import Contact from "./pages/contact/Contact";
 import Home from "./pages/home/Home";
 import { Routes, Route } from "react-router-dom";
 import ShowBlog from "./pages/blogs/ShowBlog";
+import NewBlogForm from "./components/newBlogform/NewBlogForm";
 
 const App = () => {
   const headerTitle = "Blogger";
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blogs/:id" element={<ShowBlog />} />
+        <Route path="/create-blog" element={<NewBlogForm />} />
       </Routes>
     </div>
   );

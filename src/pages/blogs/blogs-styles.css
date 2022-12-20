@@ -7,6 +7,13 @@
   flex-wrap: wrap;
 }
 
+.single-blog-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
 .blog-card {
   height: 200px;
   width: 200px;

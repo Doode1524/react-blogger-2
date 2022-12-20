@@ -5,6 +5,7 @@ import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 import Home from "./pages/home/Home";
 import { Routes, Route } from "react-router-dom";
+import ShowBlog from "./pages/blogs/ShowBlog";
 
 const App = () => {
   const headerTitle = "Blogger";
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/blogs/:id" element={<ShowBlog />} />
       </Routes>
     </div>
   );

@@ -7,7 +7,9 @@ const Header = ({ title, navLinks }) => {
 
   return (
     <div className="header-container">
-      <div>{title}</div>
+      <div className="header-title" onClick={() => navigate("/")}>
+        {title}
+      </div>
       <div className="navlinks">
         {navLinks.map((ele) => (
           <button onClick={() => navigate(ele.link)} className="navlink">

@@ -1,9 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import Blog from "./Blog";
+import "./blogs-styles.css";
 
 const Blogs = () => {
-  return (
-    <div>Blogs page is under construction</div>
-  )
-}
+  const [blogs, setBlogs] = useState([]);
 
-export default Blogs
+  const fetchBlogs = async () => {
+    fetch("http://localhost:3000/blogs")
+      .then((res) => res.json())
+      .then((data) => setBlogs(data));
+  };
+
+  useEffect(() => {
+    fetchBlogs();
+  }, []);
+
+  return (
+    <>
+      <div>
+        <button>Create Blog</button>
+      </div>
+      <div className="blogs-container">
+        {blogs && blogs.map((blog) => <Blog data={blog} />)}
+      </div>
+    </>
+  );
+};
+
+export default Blogs;

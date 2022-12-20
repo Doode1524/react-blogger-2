@@ -1,9 +1,17 @@
 import "./App.css";
+import Header from "./components/header/Header";
 
 const App = () => {
+  const headerTitle = "Blogger";
+  const navLinks = [
+    { name: "Blogs", link: "/blogs" },
+    { name: "About", link: "/about" },
+    { name: "Contact", link: "/contact" },
+  ];
+
   return (
     <div className="App">
-      <h1>Hellow</h1>
+      <Header title={headerTitle} navLinks={navLinks} />
     </div>
   );
 };

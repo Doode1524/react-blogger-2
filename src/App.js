@@ -1,4 +1,4 @@
-import './App.css';
+import "./App.css";
 
 const App = () => {
   return (
@@ -6,6 +6,6 @@ const App = () => {
       <h1>Hellow</h1>
     </div>
   );
-}
+};
 
 export default App;

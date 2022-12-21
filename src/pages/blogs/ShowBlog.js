@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import Button from "../../components/button/Button";
 import "./blogs-styles.css";
 
 const ShowBlog = () => {
@@ -32,7 +33,7 @@ const ShowBlog = () => {
         <p>{blog && blog.content}</p>
         <div>
           <button>Update</button>
-          <button onClick={() => handleDelete()}>Delete</button>
+          <Button onClick={handleDelete}>Delete</Button>
         </div>
       </div>
     </div>
